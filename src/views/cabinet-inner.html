@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Smart RP</title>
+  <meta name="theme-color" content="#fff">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+  <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
+  <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
+  <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
+  <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+  <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="row-flex header__row j-between a-center">
+        <!-- Nav -->
+        <div class="navbar header__navbar upper col">
+          <button class="btn burger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <nav class="nav">
+            <a class='nav__link active' href='./'>Главная</a>
+            <a class='nav__link' href='#'>Новости</a>
+            <a class='nav__link' href='#'>Форум</a>
+            <a class='nav__link' href='#'>Рейтинг</a>
+            <a class='nav__link nav__link-mob' href='./donat.html'>Донат</a>
+            <a class='nav__link nav__link-mob' href='./cabinet.html'>Личный кабинет</a>
+          </nav>
+        </div>
+
+        <!-- Logo -->
+        <a class='logo header__logo col flex a-center' href="/">
+          <img class='logo__image' src="img/logo.png" alt="">
+          <div class="logo__text text-center upper">
+            <div class="logo__text-up">SMART</div>
+            <div class="logo__text-down">role play</div>
+          </div>
+        </a>
+
+        <!-- Buttons -->
+        <div class="auth header__auth flex col">
+          <a href='./donat.html' class="btn btn_blue auth__btn upper">Пополнить счет</a>
+          <div class="btn auth__btn auth__user upper flex a-center">
+            Kirill_Arefyew
+            <a href="#">
+              <img src="./img/svg/user-logout.svg" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- Main -->
+  <main class="main">
+    <!-- Jumb -->
+    <section class="cabinet section">
+      <ul class='scene hidden-md'>
+        <li class='scene__layer' data-depth="0.2">
+          <img src="img/form-page-bubles.png" alt="" class='jumb__bubble'>
+        </li>
+      </ul>
+
+      <div class="container">
+        <h2 class="section__title cabinet__title text-center" data-back-font='User'>
+          <span class="section__title-value">Личный кабинет</span>
+        </h2>
+
+
+        <div class="cabinet__inner flex">
+          <!-- Exit -->
+          <button class="btn btn_blue cabinet__exit flex a-center j-center">
+            <img src="img/svg/logout.svg" alt="">
+          </button>
+
+
+          <!-- Left -->
+          <div class="cabinet__user cabinet__block user">
+            <div class="cabinet__subtitle">Статистика</div>
+            <div class="user__inner">
+              <div class="user__profile-wrap flex a-center">
+                <!-- Photo -->
+                <div class="user__photo flex j-center a-center">
+                  <div class="user__photo-inner flex j-center a-center">
+                    <img src="img/svg/user.svg" alt="">
+                  </div>
+                </div>
+
+                <div class="user__profile">
+                  <!-- Name -->
+                  <div class="user__name">Kirill_Arefyew</div>
+
+                  <div class="user__circles-wrap flex">
+                    <div class="user__circles flex a-center">
+                      <div class='circle' id="circle-1">
+                        <div class="loader-bg">
+                          <div class="circle-text">00:00:00</div>
+                        </div>
+                        <div class="circle-caption text-center">Уровень</div>
+                      </div>
+
+                      <div class='circle' id="circle-2">
+                        <div class="loader-bg">
+                          <div class="circle-text">00:00:00</div>
+                        </div>
+                        <div class="circle-caption text-center">EXP</div>
+                      </div>
+                    </div>
+
+                    <div class="user__circle-list user__list">
+                      <div class="user__circle-row user__row">
+                        <div class="user__row-key">Наличные:</div>
+                        <div class="user__row-value">37 000₽</div>
+                      </div>
+                      <div class="user__circle-row user__row">
+                        <div class="user__row-key">В банке:</div>
+                        <div class="user__row-value">120 000₽</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <!-- Info -->
+              <div class="user__info">
+                <!-- List -->
+                <div class="user__list">
+                  <div class="user__row">
+                    <div class="user__row-key">Недвижимость:</div>
+                    <div class="user__row-value">Дом №333</div>
+                  </div>
+                  <div class="user__row">
+                    <div class="user__row-key">Организация:</div>
+                    <div class="user__row-value">Нет</div>
+                  </div>
+                  <div class="user__row">
+                    <div class="user__row-key">Номер телефона:</div>
+                    <div class="user__row-value">273-111</div>
+                  </div>
+                  <div class="user__row">
+                    <div class="user__row-key">Предупреждения:</div>
+                    <div class="user__row-value alert">До 17.10.2020 21:19</div>
+                  </div>
+                  <div class="user__row">
+                    <div class="user__row-key">Лидер:</div>
+                    <div class="user__row-value">Нет</div>
+                  </div>
+                  <div class="user__row">
+                    <div class="user__row-key">Пол:</div>
+                    <div class="user__row-value">Мужской</div>
+                  </div>
+                  <div class="user__row">
+                    <div class="user__row-key">Уровень администратора:</div>
+                    <div class="user__row-value">5</div>
+                  </div>
+                </div>
+
+                <!-- Button -->
+                <button class="btn btn_blue user__btn">Донат-счет: 600</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right -->
+          <div class="cabinet__autopark autopark">
+            <div class="cabinet__subtitle">Автопарк</div>
+            <div class="autopark__list">
+              <div class="autopark__item">
+                <div class="autopark__name">Mercedes-Benz C-class</div>
+              </div>
+              <div class="autopark__item">
+                <div class="autopark__name">Mercedes-Benz C-class</div>
+              </div>
+              <div class="autopark__item">
+                <div class="autopark__name">Mercedes-Benz C-class</div>
+              </div>
+              <div class="autopark__item">
+                <div class="autopark__name">Mercedes-Benz C-class</div>
+              </div>
+              <div class="autopark__item">
+                <div class="autopark__name">Mercedes-Benz C-class</div>
+              </div>
+              <div class="autopark__item">
+                <div class="autopark__name">Mercedes-Benz C-class</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  @@include("../blocks/modules/footer/footer.html")
+  <script src="js/main.js"></script>
+  <script src="js/vendor.js"></script>
+</body>
+
+</html>

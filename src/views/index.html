@@ -1,34 +1,201 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>gulp-scss-starter</title>
-        <meta name="theme-color" content="#fff">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-        <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
-        <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
-        <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
-        <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
-        <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
-        <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
-        <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
-        <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
-        <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
-        <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
-        <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
-        <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
-        <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
-        <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
-        <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
-        <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
-        <link rel="stylesheet" href="styles/main.css">
-    </head>
-    <body>
-        @@include("../blocks/modules/header/header.html")
-        @@include("../blocks/modules/footer/footer.html")
-        <script src="js/main.js"></script>
-        <script src="js/vendor.js"></script>
-    </body>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Smart RP</title>
+  <meta name="theme-color" content="#fff">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+  <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
+  <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
+  <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
+  <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+  <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+  <!-- Header -->
+  @@include("../blocks/modules/header/header.html")
+
+
+  <!-- Main -->
+  <main class="main">
+    <!-- Jumb -->
+    <section class="jumb section flex a-center j-center">
+      <ul class='scene jumb-scene-2 hidden-md'>
+        <li class='scene__layer' data-depth="0.2">
+          <img src="img/jumb-bubles.png" alt="" class='jumb__bubble'>
+        </li>
+      </ul>
+
+      <div class="container">
+        <div class="jumb__main text-center">
+          <div class="jumb__online">
+            <img src="img/icon-lightning.png" alt="">
+            сейчас онлайн:&nbsp;&nbsp;<span class='jumb__online-value'>3999</span>
+          </div>
+          <div class="jumb__play-wrap">
+            <a href='#' class="jumb__play flex-inline a-center">
+              <div class="jumb__play-icon">
+                <img src="img/svg/play-button.svg" alt="">
+              </div>
+              <div class="jumb__play-value text-left">Как начать<br> играть?</div>
+            </a>
+          </div>
+          <div class="jumb__title upper">SMART RP</div>
+          <div class="jumb__caption">Увлекательная онлайн-игра про Россию</div>
+          <div class="jumb__btn-wrap">
+            <button class='btn btn-icon btn_blue jumb__btn'>
+              <i class="btn__icon jumb__btn-icon"></i>
+              <span class="btn__value">Скачать игру</span>
+            </button>
+          </div>
+        </div>
+        <div class="jumb__requirement">
+          <button class="btn btn_trans jumb__requirement-btn modal-trigger" modal-target='.modal-req'>
+            Системные требования
+          </button>
+        </div>
+      </div>
+
+
+      <div class="jumb__car-wrap jumb__car jumb__car-right">
+        <img src="img/audi.png" alt="" data-aos="slide-left" data-aos-duration="1500">
+      </div>
+
+      <div class="jumb__car-wrap jumb__car jumb__car-left">
+        <img src="img/bentley.png" alt="" data-aos="slide-right" data-aos-duration="1500" data-aos-delay="400">
+      </div>
+    </section>
+
+    <!-- News -->
+    <div class="sections-wrap">
+      <ul class='scene jumb-scene-2 hidden-md'>
+        <li class='scene__layer' data-depth="0.2">
+          <img src="img/sections-bubles.png" class='sections-wrap__image' alt="">
+        </li>
+      </ul>
+
+      <section class="news section">
+        <div class="container">
+          <h2 class="section__title text-center" data-back-font='NEWS'>
+            <span class="section__title-value">Новости проекта</span>
+          </h2>
+          <div class="news__list row-flex">
+            <!-- Item -->
+            <div class="news__item col" data-aos="fade-right" data-aos-duration="1200" data-aos-offset="300">
+              <div class="news__preview" style='background-image: url(img/news-preview.png);'></div>
+              <div class="news__info">
+                <div class="news__title">Открытие SMART RP!</div>
+                <div class="news__descr">
+                  Уже в эту субботу (8 августа 2020 года) в 16:00 по мск проект SMART RP готов показать вам всё то, что
+                  делалось более года и не имеет аналогов! Скорее скачивай игру и ожидай открытия.
+                </div>
+                <div class="news__bottom flex j-between a-center">
+                  <div class="news__date">03.08.2020</div>
+                  <button class="btn btn_trans news__detail">
+                    Подробнее
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item -->
+            <div class="news__item col" data-aos="slide-up" data-aos-duration="1200" data-aos-offset="300">
+              <div class="news__preview" style='background-image: url(img/news-preview.png);'></div>
+              <div class="news__info">
+                <div class="news__title">Открытие SMART RP!</div>
+                <div class="news__descr">
+                  Уже в эту субботу (8 августа 2020 года) в 16:00 по мск проект SMART RP готов показать вам всё то, что
+                  делалось более года и не имеет аналогов! Скорее скачивай игру и ожидай открытия.
+                </div>
+                <div class="news__bottom flex j-between a-center">
+                  <div class="news__date">03.08.2020</div>
+                  <button class="btn btn_trans news__detail">
+                    Подробнее
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item -->
+            <div class="news__item col" data-aos="fade-left" data-aos-duration="1200" data-aos-offset="300">
+              <div class="news__preview" style='background-image: url(img/news-preview.png);'></div>
+              <div class="news__info">
+                <div class="news__title">Открытие SMART RP!</div>
+                <div class="news__descr">
+                  Уже в эту субботу (8 августа 2020 года) в 16:00 по мск проект SMART RP готов показать вам всё то, что
+                  делалось более года и не имеет аналогов! Скорее скачивай игру и ожидай открытия.
+                </div>
+                <div class="news__bottom flex j-between a-center">
+                  <div class="news__date">03.08.2020</div>
+                  <button class="btn btn_trans news__detail">
+                    Подробнее
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contacts -->
+      <section class="contacts section">
+        <div class="container">
+          <h2 class="section__title text-center" data-back-font='CONTACTS'>
+            <span class="section__title-value">Контакты</span>
+          </h2>
+          <div class="contacts__list text-center row-flex">
+            <!-- Item -->
+            <div class="contacts__item col" data-aos="fade-up-right" data-aos-duration="1200" data-aos-offset="200">
+              <div class="contacts__image">
+                <img src="img/vk.png" alt="">
+              </div>
+              <div class="contacts__subtitle">ВКонтакте</div>
+              <button class="btn btn_trans contacts__btn">Подписаться</button>
+            </div>
+
+            <!-- Item -->
+            <div class="contacts__item col" data-aos="zoom-in-up" data-aos-duration="1200" data-aos-offset="200">
+              <div class="contacts__image">
+                <img src="img/youtube.png" alt="">
+              </div>
+              <div class="contacts__subtitle">YouTube</div>
+              <button class="btn btn_trans contacts__btn">Подписаться</button>
+            </div>
+
+            <!-- Item -->
+            <div class="contacts__item col" data-aos="fade-up-left" data-aos-duration="1200" data-aos-offset="200">
+              <div class="contacts__image">
+                <img src="img/discord.png" alt="">
+              </div>
+              <div class="contacts__subtitle">Discord</div>
+              <button class="btn btn_trans contacts__btn">Подписаться</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+  @@include("../blocks/modules/footer/footer.html")
+  <script src="js/main.js"></script>
+  <script src="js/vendor.js"></script>
+</body>
+
 </html>
