@@ -412,8 +412,8 @@ textarea {
     &--phone {
       position: absolute;
       z-index: 10;
-      padding-left: 55%;
-      top: 200px;
+      padding-left: 57%;
+      top: 20vh;
       margin-top: 70px;
 
       @include lg-block{
@@ -593,7 +593,7 @@ textarea {
 .jumb {
   position: relative;
   min-height: 100vh;
-  padding: 314px 0 76px;
+  padding: 25vh 0 75px;
 
   @media screen and (max-width: rem(1200)) {
     padding-top: 260px;
@@ -950,7 +950,7 @@ textarea {
 }
 
 .news {
-  padding-top: 80px;
+  padding-top: 100px;
   padding-bottom: 105px;
 
   @include sm-block {
@@ -1921,10 +1921,9 @@ textarea {
     width: 100%;
     margin: 0 auto;
     text-align: center;
-
     font-weight: 400;
     font-family: $light;
-    line-height: 20px;
+    line-height: 24px;
     font-size: 15px;
   }
 

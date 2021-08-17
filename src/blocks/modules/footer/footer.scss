@@ -1,7 +1,7 @@
 .footer {
   background-color: #101A34;
   padding-bottom: 25px;
-  padding-top: 20px;
+  padding-top: 30px;
 
   position: relative;
   z-index: 3;
@@ -23,11 +23,10 @@
     a {
       display: inline-block;
       padding: 0px 10px;
-
       color: #fff;
       text-transform: uppercase;
       font-family: $light;
-      font-size: 16px;
+      font-size: 12px;
       font-weight: 300;
 
       @include lg-block {
@@ -46,7 +45,6 @@
 
   &__links-buttons {
     margin-top: 20px;
-
     display: grid;
     justify-content: center;
     grid-template-columns: repeat(auto-fit, 148px);
@@ -58,9 +56,8 @@
   }
 
   &__links-button {
-    height: 41px;
+    height: 40px;
     padding: 0 10px;
-
     font-size: 12px;
   }
 
@@ -96,15 +93,15 @@
 
 .copyright {
   margin-top: 28px;
-
+  text-transform: uppercase;
   color: rgba(#fff, 0.5);
   font-family: $light;
-  font-size: 16px;
+  font-size: 12px;
+  line-height: 1;
   font-weight: 300;
 
   @include sm-block {
     margin-top: 20px;
-
     font-size: 12px;
   }
 }
