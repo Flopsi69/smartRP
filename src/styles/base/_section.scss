@@ -1,0 +1,126 @@
+.section {
+  overflow: hidden;
+  &__title {
+    position: relative;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 136.8%;
+    
+    @include sm-block {
+      font-size: 30px;
+    }
+    &::before {
+      content: attr(data-back-font);
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      font-size: 100px;
+      font-weight: bold;
+      text-transform: uppercase;
+
+      color: black;
+      -webkit-text-stroke: 1px rgba(255,255,255,0.08);
+      -webkit-text-fill-color: transparent;
+      
+      @include lg-block{
+        font-size: 80px;
+      }
+      
+      @include md-block{
+        font-size: 60px;
+      }
+
+      @include sm-block {
+        display: none;
+      }
+    }
+
+    span {
+      color: $blue;
+    }
+  }
+
+  &--about {
+    padding: 252px 0 146px;
+
+    position: relative;
+    z-index: 3;
+
+    @include md-block{
+      padding: 146px 0 240px;
+    }
+  }
+
+  &--rating {
+    background-image: url('../img/bg/bg-rating-blur.png');
+    background-size: cover;
+  }
+
+  &__bg {
+    pointer-events: none;
+
+    z-index: 2;
+
+    &:after,
+    &:before{
+      content: '';
+      position: absolute;
+      background-repeat: no-repeat;
+    }
+
+    &:after{
+      background-image: url('../img/bg/bg-section-right.png');
+      right: 0;
+      top: 210px;
+      width: 438px;
+      height: 1210px;
+      
+      @media screen and (max-width: 1386px) {
+        right: -90px;
+      }
+      @include lg-block{
+        right: -240px;
+      }
+      @include md-block{
+        background-image: url('../img/bg/bg-section-right-mobile.png');
+        bottom: 0;
+        width: 325px;
+        height: 770px;
+        right: 0;
+        bottom: -440px;
+        top: auto;
+      }
+    }
+
+    &:before{
+      background-image: url('../img/bg/bg-section-left.png');
+      left: 0;
+      top: 0;
+      width: 341px;
+      height: 1180px;
+      @include lg-block{
+        left: -50px;
+      }
+      @include md-block{
+        display: none;
+      }
+    }
+
+    &--donat {
+      &:after{
+        top: 47px;
+        background-image: url('../img/bg/bg-section-right-donat.png');
+      }
+  
+      &:before{
+        background-image: url('../img/bg/bg-section-left-donat.png');
+      
+      }
+    }
+  }
+}

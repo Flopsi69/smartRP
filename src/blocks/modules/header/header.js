@@ -106,9 +106,22 @@ $(document).ready(function () {
       .addClass('active');
   });
 
+  let flagMenuOpen = false;
+
   $('.burger').click(function () {
     $(this).toggleClass('active');
-    $('.nav').slideToggle();
+    $('body').toggleClass('lock');
+    $('.nav').toggleClass('active');
+    flagMenuOpen = flagMenuOpen ? false : true;
+  });
+
+  $('.nav__link').on('click', function (e) {
+    if (flagMenuOpen) {
+      $('.burger').toggleClass('active');
+      $('body').toggleClass('lock');
+      $('.nav').toggleClass('active');
+      flagMenuOpen = false;
+    }
   });
 
   if (window.outerWidth > 768) {
@@ -179,7 +192,7 @@ function Circlebar(prefs) {
     that.size = attribs.circleSize || prefs.size || '150px';
     that.fontSize = attribs.circleFontsize || prefs.fontSize || '20px';
     that.fontColor =
-      attribs.circleFontcolor || prefs.fontColor || 'rgb(135, 206, 235)';
+      attribs.circleFontcolor || prefs.fontColor || '#2499E4';
     that.skin = attribs.circleSkin || prefs.skin || ' ';
     that.triggerPercentage =
       attribs.circleTriggerpercentage || prefs.triggerPercentage || false;
@@ -306,9 +319,9 @@ if ($('#circle-1').length) {
     element: '#circle-1',
     type: 'progress',
     maxValue: currentLevel,
-    size: 56,
-    fontSize: '16px',
-    fontColor: '#181818'
+    size: 70,
+    fontSize: '20px',
+    fontColor: '#fff'
   });
 }
 if ($('#circle-2').length) {
@@ -317,9 +330,9 @@ if ($('#circle-2').length) {
     element: '#circle-2',
     type: 'progress',
     maxValue: currentExp,
-    size: 56,
-    fontSize: '16px',
-    fontColor: '#181818'
+    size: 70,
+    fontSize: '20px',
+    fontColor: '#fff'
   });
 }
 

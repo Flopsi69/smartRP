@@ -1,153 +1,145 @@
 <!DOCTYPE html>
 <html lang="ru">
 
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Smart RP</title>
-  <meta name="theme-color" content="#fff">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
-  <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
-  <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
-  <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
-  <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
-  <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
-  <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Smart RP</title>
+    <meta name="theme-color" content="#fff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
+    <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles/main.css">
-</head>
+    <link rel="stylesheet" href="styles/main.css">
+  </head>
 
-<body>
-  <!-- Header -->
-  @@include("../blocks/modules/header/header.html")
+  <body>
+    <!-- Header -->
+    @@include("../blocks/modules/header/header.html", {
+      "homeIsActive": 'active',
+        "ratingIsActive": '',
+        "aboutIsActive": '',
+        "donatIsActive": '',
+        "newsHref": '#news',
+    })
 
 
-  <!-- Main -->
-  <main class="main">
-    <!-- Jumb -->
-    <section class="jumb section flex a-center j-center">
-      <ul class='scene jumb-scene-2 hidden-md'>
-        <li class='scene__layer' data-depth="0.2">
-          <img src="img/jumb-bubles.png" alt="" class='jumb__bubble'>
-        </li>
-      </ul>
-
-      <div class="container">
-        <div class="jumb__main text-center">
-          <div class="jumb__online">
-            <img src="img/icon-lightning.png" alt="">
-            сейчас онлайн:&nbsp;&nbsp;<span class='jumb__online-value'>3999</span>
-          </div>
-          <div class="jumb__play-wrap">
-            <a href='#' class="jumb__play flex-inline a-center">
-              <div class="jumb__play-icon">
-                <img src="img/svg/play-button.svg" alt="">
+    <!-- Main -->
+    <main class="main">
+      <!-- Jumb -->
+      <section class="jumb section">
+        <ul class='scene jumb-scene-jumb'>
+          <li class='scene__layer' data-depth="0.2">
+            <div class="scene__layer--phone">
+              <div class="jumb__mobile">
+                <button class="btn btn_orange jumb__mobile-btn modal-trigger" modal-target=".modal-req" >требования игры</button>
+                <div class="frame-mobile frame-mobile--jumb">
+                  <img src="img/frame-mobile.png" class="frame-mobile__bg" alt="" />
+                  <div class="frame-mobile__image" style='background-image: url(img/img-frame-mobile.jpg);'></div>
+                </div>
               </div>
-              <div class="jumb__play-value text-left">Как начать<br> играть?</div>
-            </a>
-          </div>
-          <div class="jumb__title upper">SMART RP</div>
-          <div class="jumb__caption">Увлекательная онлайн-игра про Россию</div>
-          <div class="jumb__btn-wrap">
-            <button class='btn btn-icon btn_blue jumb__btn'>
-              <i class="btn__icon jumb__btn-icon"></i>
-              <span class="btn__value">Скачать игру</span>
-            </button>
-          </div>
-        </div>
-        <div class="jumb__requirement">
-          <button class="btn btn_trans jumb__requirement-btn modal-trigger" modal-target='.modal-req'>
-            Системные требования
-          </button>
-        </div>
-      </div>
+            </div>
+          </li>
+        </ul>
 
+        <div class="jumb__bg jumb__bg--blur"></div>
+        <div class="jumb__bg jumb__bg--contur"></div>
+        <div class="jumb__bg font-bg font-bg--jumb-right" data-back-font-af="CRIMINAL RUSSIA" data-back-font-bf="smart rp"></div>
 
-      <div class="jumb__car-wrap jumb__car jumb__car-right">
-        <img src="img/audi.png" alt="" data-aos="slide-left" data-aos-duration="1500">
-      </div>
-
-      <div class="jumb__car-wrap jumb__car jumb__car-left">
-        <img src="img/bentley.png" alt="" data-aos="slide-right" data-aos-duration="1500" data-aos-delay="400">
-      </div>
-    </section>
-
-    <!-- News -->
-    <div class="sections-wrap">
-      <ul class='scene jumb-scene-2 hidden-md'>
-        <li class='scene__layer' data-depth="0.2">
-          <img src="img/sections-bubles.png" class='sections-wrap__image' alt="">
-        </li>
-      </ul>
-
-      <section class="news section">
         <div class="container">
-          <h2 class="section__title text-center" data-back-font='NEWS'>
-            <span class="section__title-value">Новости проекта</span>
-          </h2>
-          <div class="news__list row-flex">
-            <!-- Item -->
-            <div class="news__item col" data-aos="fade-right" data-aos-duration="1200" data-aos-offset="300">
-              <div class="news__preview" style='background-image: url(img/news-preview.png);'></div>
-              <div class="news__info">
-                <div class="news__title">Открытие SMART RP!</div>
-                <div class="news__descr">
-                  Уже в эту субботу (8 августа 2020 года) в 16:00 по мск проект SMART RP готов показать вам всё то, что
-                  делалось более года и не имеет аналогов! Скорее скачивай игру и ожидай открытия.
-                </div>
-                <div class="news__bottom flex j-between a-center">
-                  <div class="news__date">03.08.2020</div>
-                  <button class="btn btn_trans news__detail">
-                    Подробнее
-                  </button>
+          <div class="jumb__body row-flex">
+            <div class="jumb__info col font-bg font-bg--jumb-left" data-back-font-bf="CRMP MOBILE">
+              <h1 class="jumb__title section__title">
+                Играй <span>в smart roleplay</span> <br>
+                по сети на своем телефоне
+              </h1>
+
+              <p class="jumb__subtitle">увлекательная онлайн-игра про Россию</p>
+              <div class="jumb__buttons">
+                <a href="#" class='btn btn_blue jumb__btn jumb__btn--blue'>
+                  Начать игру
+                </a>
+                <a href="#" target="_blank" class="btn jumb__btn jumb__btn--play">
+                  <img class="jumb__btn--play-icon" src="img/play-button.svg" alt="play" />
+                  <span>как начать играть</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="jumb__fake col">
+              <div class="jumb__mobile jumb__mobile--fake">
+                <button class="btn btn_orange jumb__mobile-btn modal-trigger" modal-target=".modal-req" >требования игры</button>
+                <div class="frame-mobile frame-mobile--jumb">
+                  <img src="img/frame-mobile.png" class="frame-mobile__bg" alt="" />
+                  <div class="frame-mobile__image" style='background-image: url(img/img-frame-mobile.jpg);'></div>
                 </div>
               </div>
             </div>
 
-            <!-- Item -->
-            <div class="news__item col" data-aos="slide-up" data-aos-duration="1200" data-aos-offset="300">
-              <div class="news__preview" style='background-image: url(img/news-preview.png);'></div>
-              <div class="news__info">
-                <div class="news__title">Открытие SMART RP!</div>
-                <div class="news__descr">
-                  Уже в эту субботу (8 августа 2020 года) в 16:00 по мск проект SMART RP готов показать вам всё то, что
-                  делалось более года и не имеет аналогов! Скорее скачивай игру и ожидай открытия.
-                </div>
-                <div class="news__bottom flex j-between a-center">
-                  <div class="news__date">03.08.2020</div>
-                  <button class="btn btn_trans news__detail">
-                    Подробнее
-                  </button>
-                </div>
-              </div>
-            </div>
+            <div class="jumb__server jumb-server col">
+              <h3 class="jumb-server__title">Наши сервера</h3>
+              <div class="jumb-server__list">
 
-            <!-- Item -->
-            <div class="news__item col" data-aos="fade-left" data-aos-duration="1200" data-aos-offset="300">
-              <div class="news__preview" style='background-image: url(img/news-preview.png);'></div>
-              <div class="news__info">
-                <div class="news__title">Открытие SMART RP!</div>
-                <div class="news__descr">
-                  Уже в эту субботу (8 августа 2020 года) в 16:00 по мск проект SMART RP готов показать вам всё то, что
-                  делалось более года и не имеет аналогов! Скорее скачивай игру и ожидай открытия.
+                <div class="jumb-server__list-item">
+                  <div class="jumb-server__list-circle">
+                    01
+                  </div>
+                  <div class="jumb-server__list-body">
+                    <div class="jumb-server__list-name">Smart rp: 01</div>
+                    <div class="jumb-server__list-online">Онлайн: 1000/1000</div>
+                  </div>
+                  <div class="jumb-server__list-bonus">
+                    <div class="jumb-server__list-bonus-inner">
+                      x2
+                    </div>
+                  </div>
                 </div>
-                <div class="news__bottom flex j-between a-center">
-                  <div class="news__date">03.08.2020</div>
-                  <button class="btn btn_trans news__detail">
-                    Подробнее
-                  </button>
+
+                <div class="jumb-server__list-item">
+                  <div class="jumb-server__list-circle">
+                    02
+                  </div>
+                  <div class="jumb-server__list-body">
+                    <div class="jumb-server__list-name">Smart rp: 02</div>
+                    <div class="jumb-server__list-online">Онлайн: 1000/1000</div>
+                  </div>
+                  <div class="jumb-server__list-bonus">
+                    <div class="jumb-server__list-bonus-inner">
+                      x2
+                    </div>
+                  </div>
+                </div>
+
+                <div class="jumb-server__list-item">
+                  <div class="jumb-server__list-circle">
+                    03
+                  </div>
+                  <div class="jumb-server__list-body">
+                    <div class="jumb-server__list-name">Smart rp: 03</div>
+                    <div class="jumb-server__list-online">Онлайн: 1000/1000</div>
+                  </div>
+                  <div class="jumb-server__list-bonus">
+                    <div class="jumb-server__list-bonus-inner">
+                      x2
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -155,47 +147,146 @@
         </div>
       </section>
 
-      <!-- Contacts -->
-      <section class="contacts section">
-        <div class="container">
-          <h2 class="section__title text-center" data-back-font='CONTACTS'>
-            <span class="section__title-value">Контакты</span>
-          </h2>
-          <div class="contacts__list text-center row-flex">
-            <!-- Item -->
-            <div class="contacts__item col" data-aos="fade-up-right" data-aos-duration="1200" data-aos-offset="200">
-              <div class="contacts__image">
-                <img src="img/vk.png" alt="">
-              </div>
-              <div class="contacts__subtitle">ВКонтакте</div>
-              <button class="btn btn_trans contacts__btn">Подписаться</button>
-            </div>
+      <!-- News -->
+      <div class="sections-wrap sections-wrap">
 
-            <!-- Item -->
-            <div class="contacts__item col" data-aos="zoom-in-up" data-aos-duration="1200" data-aos-offset="200">
-              <div class="contacts__image">
-                <img src="img/youtube.png" alt="">
+        <section id="news" class="news section font-bg font-bg--news-section" data-back-font-bf="CRIMINAL RUSSIA">
+          <div class="container">
+            <h2 class="section__title section__title--news text-center" data-back-font='Новости проекта'>
+              Новости <span>проекта</span>
+            </h2>
+            <div class="news__list row-flex">
+              <!-- Item -->
+              <div class="news__item col" data-aos="fade-right" data-aos-duration="1200" data-aos-offset="300">
+                <div class="news__preview" style='background-image: url(img/news-preview.jpg);'></div>
+                <div class="news__info">
+                  <div class="news__title">Открытие SMART RP!</div>
+                  <div class="news__descr">
+                    Уже в эту субботу (10 апреля 2021 года) с 10:00 по мск начинается открытое бета-тестирование проекта SMART RP! Тому, кто найдет больше всего багов, мы подарим 10.000 реальных рублей.
+                  </div>
+                  <div class="news__bottom flex j-between a-center">
+                    <div class="news__date">7 августа 2021</div>
+                    <button class="btn btn_trans news__detail">
+                      Подробнее
+                    </button>
+                  </div>
+                </div>
               </div>
-              <div class="contacts__subtitle">YouTube</div>
-              <button class="btn btn_trans contacts__btn">Подписаться</button>
-            </div>
 
-            <!-- Item -->
-            <div class="contacts__item col" data-aos="fade-up-left" data-aos-duration="1200" data-aos-offset="200">
-              <div class="contacts__image">
-                <img src="img/discord.png" alt="">
+              <!-- Item -->
+              <div class="news__item col" data-aos="slide-up" data-aos-duration="1200" data-aos-offset="300">
+                <div class="news__preview" style='background-image: url(img/news-preview.jpg);'></div>
+                <div class="news__info">
+                  <div class="news__title">Открытие SMART RP!</div>
+                  <div class="news__descr">
+                    Уже в эту субботу (10 апреля 2021 года) с 10:00 по мск начинается открытое бета-тестирование проекта SMART RP! Тому, кто найдет больше всего багов, мы подарим 10.000 реальных рублей.
+                  </div>
+                  <div class="news__bottom flex j-between a-center">
+                    <div class="news__date">7 августа 2021</div>
+                    <button class="btn btn_trans news__detail">
+                      Подробнее
+                    </button>
+                  </div>
+                </div>
               </div>
-              <div class="contacts__subtitle">Discord</div>
-              <button class="btn btn_trans contacts__btn">Подписаться</button>
+
+              <!-- Item -->
+              <div class="news__item col" data-aos="fade-left" data-aos-duration="1200" data-aos-offset="300">
+                <div class="news__preview" style='background-image: url(img/news-preview.jpg);'></div>
+                <div class="news__info">
+                  <div class="news__title">Открытие SMART RP!</div>
+                  <div class="news__descr">
+                    Уже в эту субботу (10 апреля 2021 года) с 10:00 по мск начинается открытое бета-тестирование проекта SMART RP! Тому, кто найдет больше всего багов, мы подарим 10.000 реальных рублей.
+                  </div>
+                  <div class="news__bottom flex j-between a-center">
+                    <div class="news__date">7 августа 2021</div>
+                    <button class="btn btn_trans news__detail">
+                      Подробнее
+                    </button>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-    </div>
-  </main>
-  @@include("../blocks/modules/footer/footer.html")
-  <script src="js/main.js"></script>
-  <script src="js/vendor.js"></script>
-</body>
+        </section>
+
+        <!-- Contacts -->
+        <section class="contacts section font-bg font-bg--contact-section" data-back-font-bf="CRMP MOBILE">
+          <div class="container">
+            <h2 class="section__title text-center" data-back-font='наши контакты'>
+              Наши <span>контакты</span>
+            </h2>
+            <div class="contacts__preview contacts-preview">
+              <div class="contacts-preview__block">
+                <div class="contacts-preview__phone-wrapper" data-aos="fade-up" data-aos-duration="1200">
+                  <img class="" src="img/phone-contact.png" alt="" />
+                </div>
+                
+                <ul class="contacts-preview__list-socials">
+                  <li data-aos="zoom-in-right" data-aos-duration="1200" data-aos-offset="-260">
+                    <div class="contacts-preview__card contacts-preview__card--right">
+                      <img src="img/discord.svg" alt="discord" class="contacts-preview__card-icon">
+                      <div class="contacts-preview__card-name">DISCORD канал</div>
+                      <div class="contacts-preview__card-subscribe">
+                        <a target="_blank" href="https://vk.com/smartrp_russia" class="btn btn_trans contacts-preview__card-btn">Подписаться</a>
+                        <p class="contacts-preview__card-followers">+5000 участников</p>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li data-aos="zoom-in-left" data-aos-duration="1200" data-aos-offset="-100">
+                    <div class="contacts-preview__card contacts-preview__card--left">
+                      <img src="img/vk.svg" alt="vk" class="contacts-preview__card-icon">
+                      <div class="contacts-preview__card-name">Официальная группа</div>
+                      <div class="contacts-preview__card-subscribe">
+                        <a target="_blank" href="https://discord.com/invite/xsXxb5v" class="btn btn_trans contacts-preview__card-btn">Подписаться</a>
+                        <p class="contacts-preview__card-followers">+16000 подписчиков</p>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="contacts__mobile contacts-mobile">
+              <div class="contacts-mobile__item" 
+                data-aos="fade-up"
+                data-aos-anchor-placement="top-bottom"
+                data-aos-duration="1200"
+              >
+                <div class="contacts-mobile__img-wrapper">
+                  <img src="img/vk-icon.svg" alt="vk" />
+                </div>
+                <div class="contacts-preview__card-name">Официальная группа</div>
+                <div class="contacts-preview__card-subscribe">
+                  <a target="_blank" href="https://vk.com/smartrp_russia" class="btn btn_trans contacts-preview__card-btn">Подписаться</a>
+                  <p class="contacts-preview__card-followers">+16000 ПОДПИСЧИКОВ</p>
+                </div>
+              </div>
+
+              <div class="contacts-mobile__item"
+                data-aos="fade-up"
+                data-aos-anchor-placement="top-bottom"
+                data-aos-duration="1200"
+              >
+                <div class="contacts-mobile__img-wrapper">
+                  <img src="img/discord-icon.svg" alt="discord" />
+                </div>
+                <div class="contacts-preview__card-name">DISCORD канал</div>
+                <div class="contacts-preview__card-subscribe">
+                  <a target="_blank" href="https://discord.com/invite/xsXxb5v" class="btn btn_trans contacts-preview__card-btn">Подписаться</a>
+                  <p class="contacts-preview__card-followers">+5000 участников</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+      </div>
+    </main>
+    @@include("../blocks/modules/footer/footer.html")
+    <script src="js/main.js"></script>
+    <script src="js/vendor.js"></script>
+  </body>
 
 </html>

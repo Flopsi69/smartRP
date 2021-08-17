@@ -1,0 +1,186 @@
+.font-bg {
+  position: relative;
+
+  &:after,
+  &:before{
+    position: absolute;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 120px;
+    white-space: nowrap;
+    width: 100%;
+
+    color: black;
+    -webkit-text-stroke: 1px rgba(255,255,255,0.08);
+    -webkit-text-fill-color: transparent;
+    z-index: 0;
+  }
+
+  &:after {
+    content: attr(data-back-font-af);
+  }
+
+  &:before{
+    content: attr(data-back-font-bf);
+  }
+
+  &--rating {
+    &:after{
+      right: -90%;
+      top: 270px
+    }
+    &:before{
+      left: -32%;
+      bottom: -60px;      
+    }
+
+    @include sm-block{
+      &:after,
+      &:before{
+        display: none;
+      }
+    }
+  }
+
+  &--jumb-right {
+    &:before{
+      left: 52%;
+      top: 23%
+    }
+    &:after{
+      top: 61%;
+      left: 61%;
+      -webkit-text-stroke: 1px rgba(#fff,0.6);
+    }
+
+    @include lg-block{
+      &:before,
+      &:after {
+        display: none;
+      }
+    }
+  }
+
+  &--jumb-left {
+    &:before{
+      left: -88%;
+      top: -15%
+    }
+
+    @include lg-block{
+      &:before {
+        display: none;
+      }
+    }
+  }
+
+  &--about-section {
+    &:after{
+      -webkit-text-stroke: 1px rgba(#fff, 0.1);
+      letter-spacing: 0.995em;
+      bottom: -45px;
+      left: 0;
+
+      @include md-block{
+        -webkit-text-stroke: 1px rgba(#fff, 0.6);
+        line-height: 136.8%;
+        content: 'CRIMINAL RUSSIA';
+        letter-spacing: 1px;
+        white-space: normal;
+        bottom: -100px;
+        left: auto;
+        right: -50%;
+      }
+    }
+
+    &:before {
+      -webkit-text-stroke: 1px rgba(#fff, 0.6);
+      top: 480px;
+      left: 80%;
+      z-index: 2;
+
+      @media screen and (max-width: 1300px) {
+        left: 88%;
+      }
+
+      @include lg-block{
+        display: none;
+      }
+    }
+  }
+
+  &--about-block {
+    &:after{
+      bottom: 330px;
+      left: -61%;
+      z-index: -1;
+      @include sm-block{
+        display: none;
+      }
+    }
+  }
+
+  &--lk-section {
+    &:after{
+      -webkit-text-stroke: 1px rgba(#fff, 0.1);
+      letter-spacing: 0.995em;
+      bottom: -45px;
+      left: 0;
+
+      @include md-block{
+        display: none;
+      }
+    }
+  }
+
+  &--donat {
+    &:after{
+      -webkit-text-stroke: 1px rgba(#fff, 0.6);
+      left: 80%;
+      bottom: 220px;
+      @include md-block{
+        bottom: 0;
+        left: 65%;
+      }
+      @include sm-block{
+        left: 29%;
+      }
+    }
+  }
+
+  &--cabinet {
+    &:after{
+      -webkit-text-stroke: 1px rgba(#fff, 0.6);
+      left: 76%;
+      top: 50%;
+      @include md-block{
+        display: none;
+      }
+    }
+  }
+  
+  &--news-section {
+    &:before{
+      letter-spacing: 0.265em;
+      bottom: 30px;
+      left: 0;
+
+      @include lg-block{
+        display: none;
+      }
+    }
+  }
+
+  &--contact-section {
+    &:before{
+      letter-spacing: 0.58em;
+      bottom: 30px;
+      left: 0;
+
+      @include lg-block{
+        display: none;
+      }
+    }
+  }
+
+}

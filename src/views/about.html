@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Smart RP</title>
+  <meta name="theme-color" content="#fff">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+  <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
+  <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
+  <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
+  <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+  <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+  <!-- Header -->
+  @@include("../blocks/modules/header/header.html", {
+    "homeIsActive": '',
+      "ratingIsActive": '',
+      "aboutIsActive": 'active',
+      "donatIsActive": '',
+      "newsHref": '/#news',
+  })
+
+  <!-- Main -->
+  <main class="main">
+    <!-- Jumb -->
+    <section class="section section--about font-bg font-bg--about-section" data-back-font-af="SMART RP" data-back-font-bf="CRIMINAL RUSSIA">
+      <div class="section__bg"></div>
+
+      <div class="container">
+        <h2 class="section__title cabinet__title text-center" data-back-font='О нас'>
+          <span>О</span> нас
+        </h2>
+
+        <div class="about font-bg font-bg--about-block" data-back-font-af="CRIMINAL RUSSIA">
+          <p class="about__info-text">
+            На данный момент мы имеем два проекта: SMART RP на ПК версии, и на Android. Дальше пишешь любой текст сюда. На данный момент мы имеем два проекта: SMART RP на ПК версии, и на Android. Дальше пишешь любой текст сюда. На данный момент мы имеем два проекта: SMART RP на ПК версии, и на Android. Дальше пишешь любой текст сюда. На данный момент мы имеем два проекта: SMART RP на ПК версии, и на Android. Дальше пишешь любой текст сюда. На данный момент мы имеем два проекта: SMART RP на ПК версии, и на Android. Дальше пишешь любой текст сюда. На данный момент мы имеем два проекта: SMART RP на ПК версии, и на Android. Дальше пишешь любой текст сюда. На данный момент мы имеем два проекта: SMART RP на ПК версии, и на Android. Дальше пишешь любой текст сюда. На данный момент мы имеем два проекта: SMART RP на ПК версии, и на Android. Дальше пишешь любой текст сюда. 
+          </p>
+          <div class="about__version">
+            <div class="about__version-col about-version">
+              <div class="about-version__image-wrap">
+                <div class="about-version__image-frame-pc" style='background-image: url(img/img-frame-pc.jpg);'>
+                </div>
+              </div>
+              <button class="btn btn_blue about-version__btn">smart rp pc</button>
+            </div>
+            <div class="about__version-col">
+              <div class="about-version__image-wrap about-version__image-wrap--mobile">
+                <div class="frame-mobile">
+                  <img src="img/frame-mobile.png" class="frame-mobile__bg" alt="" />
+                  <div class="frame-mobile__image" style='background-image: url(img/img-frame-mobile.jpg);'></div>
+                </div>
+              </div>
+              <button class="btn btn_blue about-version__btn">SMART RP MOBILE</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+  @@include("../blocks/modules/footer/footer.html")
+  <script src="js/main.js"></script>
+  <script src="js/vendor.js"></script>
+</body>
+
+</html>
