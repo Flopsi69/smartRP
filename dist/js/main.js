@@ -519,9 +519,12 @@ function mobProfileToggle() {
 document.addEventListener('DOMContentLoaded', donateFunction);
 
 function donateFunction() {
-  document.querySelector('#money').addEventListener('input', function () {
-    this.value = this.value.replace(/\D/g, '');
-  });
+  if (document.querySelector('#money')) {
+    document.querySelector('#money').addEventListener('input', function () {
+      this.value = this.value.replace(/\D/g, '');
+    });
+  }
+
   var donateForm = document.querySelector('.donate-form');
 
   if (!!donateForm) {

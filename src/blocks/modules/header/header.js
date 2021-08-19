@@ -87,7 +87,7 @@ $(document).ready(function () {
   AOS.init();
 
   var prefs = {
-    element: '.circlebar'
+    element: '.circlebar',
   };
   if ($('.circlebar').length) {
     $('.circlebar').each(function () {
@@ -191,8 +191,7 @@ function Circlebar(prefs) {
       parseInt(attribs.circleDialwidth) || parseInt(prefs.dialWidth) || 5;
     that.size = attribs.circleSize || prefs.size || '150px';
     that.fontSize = attribs.circleFontsize || prefs.fontSize || '20px';
-    that.fontColor =
-      attribs.circleFontcolor || prefs.fontColor || '#2499E4';
+    that.fontColor = attribs.circleFontcolor || prefs.fontColor || '#2499E4';
     that.skin = attribs.circleSkin || prefs.skin || ' ';
     that.triggerPercentage =
       attribs.circleTriggerpercentage || prefs.triggerPercentage || false;
@@ -321,7 +320,7 @@ if ($('#circle-1').length) {
     maxValue: currentLevel,
     size: 70,
     fontSize: '20px',
-    fontColor: '#fff'
+    fontColor: '#fff',
   });
 }
 if ($('#circle-2').length) {
@@ -332,7 +331,7 @@ if ($('#circle-2').length) {
     maxValue: currentExp,
     size: 70,
     fontSize: '20px',
-    fontColor: '#fff'
+    fontColor: '#fff',
   });
 }
 
@@ -354,9 +353,11 @@ function mobProfileToggle() {
 document.addEventListener('DOMContentLoaded', donateFunction);
 
 function donateFunction() {
-  document.querySelector('#money').addEventListener('input', function () {
-    this.value = this.value.replace(/\D/g, '');
-  });
+  if (document.querySelector('#money')) {
+    document.querySelector('#money').addEventListener('input', function () {
+      this.value = this.value.replace(/\D/g, '');
+    });
+  }
 
   var donateForm = document.querySelector('.donate-form');
   if (!!donateForm) {

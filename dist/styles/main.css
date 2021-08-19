@@ -964,6 +964,13 @@ textarea {
   left: 0;
 }
 
+.font-bg--donat:before {
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.15);
+  left: 0;
+  transform: translate(-18%, 37%);
+  bottom: 0;
+}
+
 .font-bg--donat:after {
   -webkit-text-stroke: 1px rgba(255, 255, 255, 0.6);
   left: 80%;
@@ -1079,10 +1086,14 @@ textarea {
 .section__bg--donat:after {
   top: 47px;
   background-image: url("../img/bg/bg-section-right-donat.png");
+  filter: blur(3px);
+  opacity: .9;
 }
 
 .section__bg--donat:before {
   background-image: url("../img/bg/bg-section-left-donat.png");
+  opacity: 0.7;
+  filter: blur(3px);
 }
 
 .scene {
@@ -1305,6 +1316,12 @@ textarea {
 
 .jumb__btn--blue {
   font-size: 22px;
+  transition: .3s;
+}
+
+.jumb__btn--blue:hover {
+  border-color: #03b8ff;
+  transform: scale(1.1) !important;
 }
 
 .jumb__btn--play {
@@ -1552,13 +1569,17 @@ textarea {
   z-index: 2;
 }
 
+.contacts-preview__phone-wrapper img {
+  position: relative;
+}
+
 .contacts-preview__phone-wrapper:before {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
+  top: -30px;
+  left: -30px;
+  bottom: -30px;
+  right: -30px;
   background: #0079C7;
   opacity: 0.15;
   filter: blur(150px);
@@ -1601,7 +1622,7 @@ textarea {
   background-size: 92%;
   width: 100%;
   height: 100%;
-  opacity: 0.1;
+  opacity: 0.04;
 }
 
 .contacts-preview__card--right .contacts-preview__card-icon {
@@ -1759,15 +1780,13 @@ textarea {
   height: 128px;
   background-color: #1D2948;
   border-radius: 50%;
-  margin-right: 17px;
-  flex-shrink: 0;
-  --userPhotoSize: 61px;
+  margin-right: 15px;
 }
 
 .user__photo-inner {
   position: relative;
-  height: var(--userPhotoSize);
-  width: var(--userPhotoSize);
+  height: 60px;
+  width: 60px;
   background-color: #1D2948;
   border-radius: 50%;
 }
@@ -1777,16 +1796,11 @@ textarea {
   position: absolute;
   top: 0;
   left: 0;
-  height: var(--userPhotoSize);
-  width: var(--userPhotoSize);
+  height: 60px;
+  width: 60px;
   filter: blur(35px);
   display: block;
   background-color: #2499E4;
-}
-
-.user__photo img {
-  height: var(--userPhotoSize);
-  width: var(--userPhotoSize);
 }
 
 .user__info {
@@ -1821,7 +1835,8 @@ textarea {
 .user__list {
   display: grid;
   grid-template-columns: 1fr;
-  row-gap: 10px;
+  row-gap: 12px;
+  width: 100%;
   margin-top: 28px;
 }
 
@@ -2046,6 +2061,7 @@ textarea {
   font-size: 12px;
   font-weight: 400;
   padding-top: 9px;
+  text-transform: uppercase;
 }
 
 .rating {
@@ -2293,6 +2309,9 @@ textarea {
 .about-version__btn {
   height: 79px;
   width: 290px;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 27px;
 }
 
 .frame-mobile {
@@ -2779,20 +2798,6 @@ textarea {
     left: 70%;
   }
 
-  .user__photo {
-    width: 90px;
-    height: 90px;
-  }
-
-  .user__photo {
-    --userPhotoSize: 26px;
-  }
-
-  .user__photo-inner {
-    width: 63px;
-    height: 63px;
-  }
-
   .autopark {
     padding-left: 30px;
   }
@@ -2851,6 +2856,10 @@ textarea {
   }
 
   .font-bg--lk-section:after {
+    display: none;
+  }
+
+  .font-bg--donat:before {
     display: none;
   }
 
@@ -2941,16 +2950,14 @@ textarea {
   .cabinet__inner {
     margin-top: 55px;
     padding: 40px 28px 45px 28px;
-  }
-
-  .cabinet__inner {
     display: block;
   }
 
   .cabinet__subtitle {
     text-align: center;
-    font-size: 22px;
+    font-size: 20px;
     padding-top: 0;
+    margin-bottom: 28px;
   }
 
   .cabinet__user {
@@ -2967,7 +2974,7 @@ textarea {
   }
 
   .user__profile-wrap {
-    justify-content: center;
+    justify-content: space-between;
   }
 
   .user__info {
@@ -2978,7 +2985,7 @@ textarea {
   }
 
   .user__list {
-    margin-top: 25px;
+    margin-top: 35px;
   }
 
   .user__circle-list {
@@ -3238,7 +3245,7 @@ textarea {
   }
 
   .cabinet__inner {
-    padding: 20px 22px 44px;
+    padding: 40px 22px 44px;
   }
 
   .cabinet__exit {
@@ -3247,12 +3254,26 @@ textarea {
   }
 
   .cabinet__exit img {
-    width: 14px;
-    height: 14px;
+    width: 20px;
+    height: 20px;
   }
 
   .user__name {
-    font-size: 16px;
+    font-size: 18px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  .user__photo {
+    width: 115px;
+    height: 115px;
+    margin-right: 10px;
+  }
+
+  .user__photo-inner {
+    height: 50%;
+    width: 50%;
   }
 
   .autopark__name {
@@ -3355,6 +3376,13 @@ textarea {
   }
 }
 
+@media screen and (max-width: 36rem) {
+  .user__list {
+    width: auto;
+    display: inline-grid;
+  }
+}
+
 @media screen and (max-width: 23.4375rem) {
   .jumb__title {
     font-size: 22px;
@@ -3362,6 +3390,12 @@ textarea {
 
   .jumb__subtitle {
     font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 23.125rem) {
+  .cabinet__inner {
+    padding: 30px 12px 35px;
   }
 }
 

@@ -115,11 +115,14 @@
       &:after{
         top: 47px;
         background-image: url('../img/bg/bg-section-right-donat.png');
+        filter: blur(3px);
+        opacity: .9;
       }
   
       &:before{
         background-image: url('../img/bg/bg-section-left-donat.png');
-      
+        opacity: 0.7;
+        filter: blur(3px);
       }
     }
   }

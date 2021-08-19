@@ -134,6 +134,15 @@
   }
 
   &--donat {
+    &:before{
+      -webkit-text-stroke: 1px rgba(#fff, 0.15);
+      left: 0;
+      transform: translate(-18%, 37%);
+      bottom: 0;
+      @include md-block{
+        display: none;
+      }
+    }
     &:after{
       -webkit-text-stroke: 1px rgba(#fff, 0.6);
       left: 80%;

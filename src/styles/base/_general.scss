@@ -709,9 +709,13 @@ textarea {
   &__btn {
     width: 100%;
     height: 75px;
-
     &--blue {
       font-size: 22px;
+      transition: .3s;
+      &:hover {
+        border-color: rgb(3, 184, 255);
+        transform: scale(1.1)!important;
+      }
     }
 
     &--play {
@@ -1054,15 +1058,17 @@ textarea {
   &__phone-wrapper {
     position: relative;
     z-index: 2;
+    img {
+      position: relative;
+    }
     
     &:before{
       content:'';
       position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-
+      top: -30px;
+      left: -30px;
+      bottom: -30px;
+      right: -30px;
       background: #0079C7;
       opacity: 0.15;
       filter: blur(150px);
@@ -1072,9 +1078,6 @@ textarea {
       max-width: 260px
     }
   }
-
-  // &__phone {
-  // }
 
   &__card {
     border-radius: 20px;
@@ -1124,7 +1127,7 @@ textarea {
         background-size: 92%;
         width: 100%;
         height: 100%;
-        opacity: 0.1;
+        opacity: 0.04;
       }
 
       .contacts-preview__card-icon {
@@ -1272,14 +1275,14 @@ textarea {
     @include md-block {
       margin-top: 55px;
       padding: 40px 28px 45px 28px;
-    }
-
-    @include md-block {
       display: block;
     }
 
     @include sm-block {
-      padding: 20px 22px 44px;
+      padding: 40px 22px 44px;
+    }
+    @include to(rem(370)) {
+      padding: 30px 12px 35px;
     }
   }
   &__exit {
@@ -1299,8 +1302,8 @@ textarea {
       height: 22px;
       margin-left: 5px;
       @include sm-block {
-        width: 14px;
-        height: 14px;
+        width: 20px;
+        height: 20px;
       }
     }
   }
@@ -1313,8 +1316,9 @@ textarea {
     padding-top: 7px;
     @include md-block {
       text-align: center;
-      font-size: 22px;
+      font-size: 20px;
       padding-top: 0;
+      margin-bottom: 28px;
     }
   }
 
@@ -1345,13 +1349,16 @@ textarea {
       margin-top: 0;
     }
     @include sm-block{
-      font-size: 16px;
+      font-size: 18px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
     }
   }
   &__profile {
     &-wrap {
       @include md-block {
-        justify-content: center;
+        justify-content: space-between;
       }
     }
   }
@@ -1360,47 +1367,39 @@ textarea {
     height: 128px;
     background-color: #1D2948;
     border-radius: 50%;
-    margin-right: 17px;
-    flex-shrink: 0;
-    @include lg-block {
-      width: 90px;
-      height: 90px;
+    margin-right: 15px;
+    @include sm-block {
+      width: 115px;
+      height: 115px;
+      margin-right: 10px;
     }
-
-    --userPhotoSize: 61px;
-    @include lg-block {
-      --userPhotoSize: 26px;
-    }
-
     &-inner {
       position: relative;
-      height: var(--userPhotoSize);
-      width: var(--userPhotoSize);
+      height: 60px;
+      width: 60px;
       background-color: #1D2948;
       border-radius: 50%;
-      @include lg-block {
-        width: 63px;
-        height: 63px;
+      @include sm-block {
+        height: 50%;
+        width: 50%;
       }
-
       &:before{
         content:'';
         position: absolute;
         top: 0;
         left: 0;
-        height: var(--userPhotoSize);
-        width: var(--userPhotoSize);
+        height: 60px;
+        width: 60px;
         filter: blur(35px);
         display: block;
-
         background-color: $blue;
       }
 
     }
-    img {
-      height: var(--userPhotoSize);
-      width: var(--userPhotoSize);
-    }
+    // img {
+    //   height: 60px;
+    //   width: 60px;
+    // }
   }
   &__info {
     margin-left: 146px;
@@ -1438,12 +1437,15 @@ textarea {
   &__list {
     display: grid;
     grid-template-columns: 1fr;
-    row-gap: 10px;
-
+    row-gap: 12px;
+    width: 100%;
     margin-top: 28px;
     @include md-block {
-      margin-top: 25px;
-      // max-width: 320px;
+      margin-top: 35px;
+    }
+    @include xs-block {
+      width: auto;
+      display: inline-grid;
     }
   }
   &__btn-wrapper {
@@ -1687,6 +1689,7 @@ textarea {
     font-size: 12px;
     font-weight: 400;
     padding-top: 9px;
+    text-transform: uppercase;
   }
 }
 
@@ -2008,6 +2011,9 @@ textarea {
   &__btn {
     height: 79px;
     width: 290px;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 27px;
   }
 }
 
