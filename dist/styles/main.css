@@ -2660,6 +2660,13 @@ textarea {
   font-size: 22px;
 }
 
+@media screen and (min-width: 112.5rem) {
+  .sections-wrap {
+    background-size: 100% auto;
+    background-position: center 70%;
+  }
+}
+
 @media screen and (max-width: 1386px) {
   .section__bg:after {
     right: -90px;
@@ -3406,6 +3413,13 @@ textarea {
 @media screen and (max-width: 22.8125rem) {
   .rating__title {
     font-size: 24px;
+  }
+}
+
+@media screen and (min-width: 48rem) and (max-width: 75rem) {
+  .sections-wrap {
+    background-size: 100% auto;
+    background-position: bottom;
   }
 }
 

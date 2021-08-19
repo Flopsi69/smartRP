@@ -378,9 +378,19 @@ textarea {
   background-image: url('../img/bg/bg-main.png');
   background-size: cover;
   background-repeat: no-repeat;
-
   @include md-block{
     background-image: url('../img/bg/bg-main-mobile.png');
+  }
+  @include from(rem(1800)) {
+    background-size: 100% auto;
+    background-position: center 70%;
+  }
+
+  @include from(rem(768)) {
+    @include to(rem(1200)) {
+      background-size: 100% auto;
+      background-position: bottom;
+    }
   }
 
   &__image {
