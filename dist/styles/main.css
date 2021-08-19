@@ -985,14 +985,14 @@ textarea {
 
 .font-bg--news-section:before {
   letter-spacing: 0.265em;
-  bottom: 30px;
+  bottom: 70px;
   left: 0;
 }
 
 .font-bg--contact-section:before {
   letter-spacing: 0.58em;
   bottom: 30px;
-  left: 0;
+  left: -20px;
 }
 
 .sections-wrap {
@@ -1490,8 +1490,8 @@ textarea {
 }
 
 .news {
-  padding-top: 100px;
-  padding-bottom: 105px;
+  padding-top: 122px;
+  padding-bottom: 141px;
 }
 
 .news__preview {
@@ -2677,6 +2677,11 @@ textarea {
     max-width: 64rem;
   }
 
+  .font-bg:after,
+  .font-bg:before {
+    font-size: 90px;
+  }
+
   .font-bg--jumb-right:before,
   .font-bg--jumb-right:after {
     display: none;
@@ -2687,14 +2692,6 @@ textarea {
   }
 
   .font-bg--about-section:before {
-    display: none;
-  }
-
-  .font-bg--news-section:before {
-    display: none;
-  }
-
-  .font-bg--contact-section:before {
     display: none;
   }
 
@@ -2872,6 +2869,14 @@ textarea {
     display: none;
   }
 
+  .font-bg--news-section:before {
+    display: none;
+  }
+
+  .font-bg--contact-section:before {
+    display: none;
+  }
+
   .sections-wrap {
     background-image: url("../img/bg/bg-main-mobile.png");
   }
@@ -2906,6 +2911,16 @@ textarea {
   .bg-text:after,
   .bg-text:before {
     display: none;
+  }
+
+  .news {
+    padding-bottom: 30px;
+    padding-top: 20px;
+  }
+
+  .news .section__title::before {
+    font-size: 86px;
+    bottom: 0;
   }
 
   .news__item {
@@ -3220,18 +3235,7 @@ textarea {
     font-size: 16px;
   }
 
-  .news {
-    padding-bottom: 30px;
-    padding-top: 20px;
-  }
-
-  .news .section__title::before {
-    font-size: 86px;
-    bottom: 0;
-  }
-
   .contacts {
-    padding-bottom: 40px;
     padding-top: 35px;
   }
 
