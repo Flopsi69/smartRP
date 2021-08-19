@@ -14,6 +14,10 @@
     -webkit-text-stroke: 1px rgba(255,255,255,0.08);
     -webkit-text-fill-color: transparent;
     z-index: 0;
+
+    @include lg-block{
+      font-size: 90px;
+    }
   }
 
   &:after {
@@ -153,6 +157,7 @@
       -webkit-text-stroke: 1px rgba(#fff, 0.6);
       left: 76%;
       top: 50%;
+      
       @include md-block{
         display: none;
       }
@@ -162,10 +167,10 @@
   &--news-section {
     &:before{
       letter-spacing: 0.265em;
-      bottom: 30px;
+      bottom: 70px;
       left: 0;
 
-      @include lg-block{
+      @include md-block{
         display: none;
       }
     }
@@ -175,9 +180,9 @@
     &:before{
       letter-spacing: 0.58em;
       bottom: 30px;
-      left: 0;
+      left: -20px;
 
-      @include lg-block{
+      @include md-block{
         display: none;
       }
     }

@@ -950,10 +950,10 @@ textarea {
 }
 
 .news {
-  padding-top: 80px;
-  padding-bottom: 105px;
+  padding-top: 122px;
+  padding-bottom: 141px;
 
-  @include sm-block {
+  @include md-block {
     padding-bottom: 30px;
     padding-top: 20px;
     .section__title::before {
@@ -1026,7 +1026,6 @@ textarea {
     padding-bottom: 80px;
   }
   @include sm-block {
-    padding-bottom: 40px;
     padding-top: 35px;
   }
 
